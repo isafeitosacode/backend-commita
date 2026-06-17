@@ -16,7 +16,14 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors()); 
+app.use(cors({
+    origin: [
+        'https://frontene-commita.vercel.app',
+        'http://localhost:5500',
+        'http://127.0.0.1:5500'
+    ],
+    credentials: true
+})); 
 app.use(express.json());
 
 // Definição dos caminhos principais
