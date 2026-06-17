@@ -1,7 +1,7 @@
 // controllers/userController.js
 const User = require('../models/User');
 const Post = require('../models/Post'); // Importante para contar as estatísticas e o ranking!
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 // 1. Pegar Perfil do Usuário
 const getUserProfile = async (req, res) => {
